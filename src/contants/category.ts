@@ -1,0 +1,17 @@
+export const categories = [
+  { label: 'Announcement', value: 'announcement' },
+  { label: 'AMA', value: 'ama' },
+  { label: 'Airdrop', value: 'airdrop' },
+  { label: 'DAO', value: 'dao' },
+  { label: 'Release', value: 'release' },
+  { label: 'Lock/Unlock', value: 'lock/unlock' },
+  { label: 'Launchpad', value: 'launchpad' },
+  { label: 'Exchange', value: 'exchange' },
+  { label: 'Meetup', value: 'meetup' },
+  { label: 'Contest', value: 'contest' },
+  { label: 'Conference', value: 'conference' },
+  { label: 'Policy', value: 'policy' },
+  { label: 'Regulation', value: 'regulation' },
+  { label: 'Emergency', value: 'emergency' },
+  { label: 'General', value: 'general' },
+] as const
