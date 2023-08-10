@@ -7,8 +7,7 @@ import {
   useEffect,
   useCallback,
 } from 'react'
-import { configureChains, useAccount } from 'wagmi'
-import { zkSync } from 'wagmi/chains'
+import { configureChains, mainnet, useAccount } from 'wagmi'
 import { alchemyProvider } from 'wagmi/providers/alchemy'
 import { publicProvider } from 'wagmi/providers/public'
 import { usePathname, useRouter } from 'next/navigation'
@@ -38,7 +37,7 @@ import { setUserInfo } from '@/redux/features/userInfoSlice'
 const maxAge = 7 * 24 * 60 * 60 // 7 days
 
 const { chains } = configureChains(
-  [zkSync],
+  [mainnet],
   [
     alchemyProvider({ apiKey: process.env.NEXT_PUBLIC_ALCHEMY_ID! }),
     publicProvider(),
@@ -188,7 +187,7 @@ function WalletProvider({ children }: PropsWithChildren<{}>) {
       localStorage.clearAll()
       return
     }
-    
+
     const refreshToken = localStorage.get(REFRESH_TOKEN)
     const firebaseToken = localStorage.get(FIREBASE_TOKEN)
     const supabaseToken = localStorage.get(SUPABASE_TOKEN)
@@ -198,7 +197,7 @@ function WalletProvider({ children }: PropsWithChildren<{}>) {
     if (isConnected && authState && !refreshToken) {
       signIn()
     }
-    
+
     if (supabaseToken) {
       const decodeSbtJwt = jwt.decode(supabaseToken)
 
