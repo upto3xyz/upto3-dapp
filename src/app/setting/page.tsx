@@ -12,7 +12,7 @@ import { FIREBASE_TOKEN } from '@/contants/localstorage'
 import { localStorage } from '@/lib/store'
 import { getUser } from '@/lib/firebase/firestore.users'
 import { setUserInfo } from '@/redux/features/userInfoSlice'
-import { Switch } from "@/components/ui/switch"
+import { Switch } from '@/components/ui/switch'
 import { Separator } from '@/components/ui/separator'
 
 export default function Setting() {
@@ -116,7 +116,7 @@ export default function Setting() {
       </div>
       <div className='flex justify-between items-center mt-4'>
         <div className='flex text-base font-normal text-zinc-800'>
-          <Icons.twitter className='mr-4' size={20} />
+          <Icons.twitter className='mr-4' size={20}/>
           Twitter account
         </div>
         {isAlreadyLinked ? (
@@ -135,7 +135,7 @@ export default function Setting() {
               onClick={handleUpdate}
             >
               {loadingTwitter ? (
-                <Icons.spinner className='mr-2 h-4 w-4 animate-spin' />
+                <Icons.spinner className='mr-2 h-4 w-4 animate-spin'/>
               ) : (
                 ''
               )}
@@ -153,7 +153,7 @@ export default function Setting() {
             onClick={handleConnectTwitter}
           >
             {loadingTwitter ? (
-              <Icons.spinner className='mr-2 h-4 w-4 animate-spin' />
+              <Icons.spinner className='mr-2 h-4 w-4 animate-spin'/>
             ) : (
               ''
             )}
@@ -166,7 +166,7 @@ export default function Setting() {
         <div className='flex'>
           <Icons.calendar_plus className='mr-4' size={20}/> Google calendar
         </div>
-        <Switch disabled />
+        <Switch disabled/>
       </div>
     </>
   )

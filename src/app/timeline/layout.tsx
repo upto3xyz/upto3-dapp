@@ -17,7 +17,7 @@ async function TimelineLayout({ children }: ReactNodeType) {
           defaultValue='upcoming'
           className='flex flex-col mb-4 min-w-full items-center'
         >
-          <Suspense fallback={<Loading />}>{children}</Suspense>
+          <Suspense fallback={<Loading/>}>{children}</Suspense>
         </Tabs>
       </div>
     )
